@@ -1,0 +1,80 @@
+:root {
+    --primary: #4A90E2;
+    --success: #48BB78;
+    --danger: #F56565;
+    --bg: #F7FAFC;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.hidden { display: none; }
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(74,144,226,0.3); }
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    outline: none;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#timer {
+    background: #ED8936;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 10px;
+    background: #E2E8F0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: var(--success);
+    transition: 0.3s;
+}

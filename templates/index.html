@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidQuiz Pro | Fun Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="card">
+            <h1>🌟 KidQuiz Pro 🌟</h1>
+            <p>Ready to test your brain power?</p>
+            <button id="start-btn">Start Adventure!</button>
+        </div>
+
+        <div id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <span id="timer">15</span>
+                <div class="progress-bar"><div id="progress"></div></div>
+                <span id="score-track">Score: 0</span>
+            </div>
+            <h2 id="question-text">Question goes here?</h2>
+            <input type="text" id="answer-input" placeholder="Type your answer..." autocomplete="off">
+            <button id="submit-btn">Submit Answer</button>
+        </div>
+
+        <div id="result-screen" class="card hidden">
+            <h1>🎉 Well Done! 🎉</h1>
+            <p id="final-score"></p>
+            <p id="badge"></p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
